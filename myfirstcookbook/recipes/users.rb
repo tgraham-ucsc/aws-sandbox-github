@@ -24,12 +24,12 @@ end
 
 user "banner" do
   comment "default user"
-  home "/opt/app/banner"
+  home "/home/banner"
   shell "/bin/bash"
 end
 
 user "fisjob" do
   comment "default user"
-  home "/opt/app/fisjob"
+  home "/home/fisjob"
   shell "/bin/bash"
 end
