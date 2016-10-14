@@ -32,3 +32,4 @@ user "fisjob" do
   comment "default user"
   home "/opt/app/fisjob"
   shell "/bin/bash"
+end
