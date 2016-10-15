@@ -33,3 +33,9 @@ user "fisjob" do
   home "/home/fisjob"
   shell "/bin/bash"
 end
+
+user "oracle" do
+  comment "default user"
+  home "/home/oracle"
+  shell "/bin/bash"
+end
