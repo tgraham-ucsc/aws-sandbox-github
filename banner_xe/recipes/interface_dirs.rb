@@ -5,9 +5,16 @@ directory "/opt/app/" do
   action :create
 end
 
-directory "/opt/app/fis_inbound" do
+directory "/opt/app/interfaces" do
   mode 0755
-  owner 'fis'
-  group 'fis'
+  owner 'root'
+  group 'root'
+  action :create
+end
+
+directory "/opt/app/interfaces" do
+  mode 0755
+  owner 'root'
+  group 'root'
   action :create
 end
