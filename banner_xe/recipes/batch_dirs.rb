@@ -4,5 +4,3 @@ directory "/opt/app/" do
   group 'root'
   action :create
 end
-
-
