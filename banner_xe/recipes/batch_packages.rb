@@ -1,15 +1,4 @@
-package 'git' do
-    action:install
-end
-
-package 'tree' do
-    action:install
-end
-
-package 'vim' do
-    action:install
-end
-
-package 'ksh' do
-    action:install
-end
+package 'git'
+package 'tree'
+package 'vim' 
+package 'ksh'
