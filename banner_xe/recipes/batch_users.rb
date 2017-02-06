@@ -1,3 +1,12 @@
+# Setup up the interface directory strucuture
+directory "/opt/app/"
+directory "/opt/app/banner"
+directory "/opt/app/oracle"
+directory "/opt/app/media"
+directory "/opt/app/fisjob"
+directory "/opt/app/fisora"
+
+# Setup users for the batch server
 user "tgraham" do
   comment "default user"
   home "/home/tgraham"
@@ -39,3 +48,37 @@ user "oracle" do
   home "/home/oracle"
   shell "/bin/bash"
 end
+
+#Setup Groups 
+group "appadmin" do
+  members "tgraham,ama149,jkeh,penniman,"
+end
+
+group "banner" do
+  action :create
+  members  "banner,tgraham,ama149,jkeh,penniman,"
+end
+
+group "oracle" do
+  action :create
+  members  "oracle"
+end
+
+directory "/opt/app/" do
+  mode 0755
+  owner 'root'
+  group 'root'
+end
+
+directory "/opt/app/banner" do
+  mode 0755
+  owner 'banner'
+  group 'banner'
+end
+
+directory "/opt/app/oracle" do
+  mode 0755
+  owner 'oracle'
+  group 'oracle'
+end
+
