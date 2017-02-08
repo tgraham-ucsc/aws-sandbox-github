@@ -5,6 +5,7 @@ directory "/opt/app/oracle"
 directory "/opt/app/media"
 directory "/opt/app/fisjob"
 directory "/opt/app/fisora"
+directory "/opt/app/config"
 
 # Setup users for the batch server
 user "tgraham" do
@@ -33,25 +34,25 @@ end
 
 user "banner" do
   comment "default user"
-  home "/home/banner"
+  home "/opt/appbanner"
   shell "/bin/bash"
 end
 
 user "fisjob" do
   comment "default user"
-  home "/home/fisjob"
+  home "/opt/app/fisjob"
   shell "/bin/bash"
 end
 
 user "oracle" do
   comment "default user"
-  home "/home/oracle"
+  home "/opt/app/oracle"
   shell "/bin/bash"
 end
 
 #Setup Groups 
 group "appadmin" do
-  members "tgraham,ama149,jkeh,penniman,"
+  members "tgraham,ama149,jkeh,penniman,oracle,banner,"
 end
 
 group "banner" do
@@ -81,4 +82,11 @@ directory "/opt/app/oracle" do
   owner 'oracle'
   group 'oracle'
 end
+
+directory "/opt/app/config" do
+  mode 0755
+  owner 'banner'
+  group 'banner'
+end
+
 
