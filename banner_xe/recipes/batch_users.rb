@@ -34,7 +34,7 @@ end
 
 user "banner" do
   comment "default user"
-  home "/opt/appbanner"
+  home "/opt/app/banner"
   shell "/bin/bash"
 end
 
