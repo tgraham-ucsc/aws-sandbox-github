@@ -1,3 +1,5 @@
+execute 'yum update -y'
+
 package 'git'
 package 'tree'
 package 'vim' 
